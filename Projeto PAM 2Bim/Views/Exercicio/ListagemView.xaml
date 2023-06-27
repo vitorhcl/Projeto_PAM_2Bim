@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto_PAM_2Bim.Views.Exercicio.ListagemView"
+             Title="ListagemView">
+    <Shell.TitleView>
+        <Button Command="{Binding NovoExercicio}" Text="Novo" HorizontalOptions="End"></Button>
+    </Shell.TitleView>
+    <ScrollView>
+        <VerticalStackLayout>
+            <ListView x:Name="ListView" HasUnevenRows="True" ItemsSource="{Binding Exercicios}" SelectedItem="{Binding ExerciciosSelecionado}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Remover" IsDestructive="True"
+                                          Command="{Binding Path=BindingContext.RemoverExercicioCommand, Source={x:Reference ListView}}"
+                                          CommandParameter="{Binding .}"></MenuItem>
+                            </ViewCell.ContextActions>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Enunciado}" FontSize="18" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

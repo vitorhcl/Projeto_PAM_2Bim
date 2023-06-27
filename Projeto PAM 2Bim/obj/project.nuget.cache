@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "lfYeciczC2/TKiKYqJg8yNQnjpBayV7w88OWYJ4f+nMNZG1ZmHdy40+xHpuLBX5JjuNopTRpxHwmJw84o+B0LA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Vitor\\Documents\\Projeto PAM 2Bim\\Projeto PAM 2Bim\\Projeto PAM 2Bim.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1012",
+      "level": "Error",
+      "message": "A versão da plataforma não está presente para uma ou mais estruturas de destino, embora elas tenham uma plataforma especificada: net7.0-android, net7.0-ios, net7.0-maccatalyst"
+    }
+  ]
+}
